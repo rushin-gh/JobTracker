@@ -1,4 +1,5 @@
-#login-page-ele {
+#login-page-ele,
+#register-page-ele {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,6 +7,13 @@
   flex-direction: column;
 }
 
-.login-page-field {
+.login-page-field,
+.register-page-field {
   padding: 5px 0px;
+}
+
+.link-css {
+  color: #0d6efd;
+  text-decoration: none;
+  cursor: pointer;
 }

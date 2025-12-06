@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import LoginPage from "./components/loginPage";
+import AuthPage from "./components/Auth/AuthPage";
 
 const App = () => {
   return (
     <div id="app">
-      <LoginPage />
+      <AuthPage />
     </div>
   );
 };

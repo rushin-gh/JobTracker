@@ -7,13 +7,14 @@ namespace apis.Controllers
     public class AuthController : ControllerBase
     {
         [HttpPost("register")]
-        public ActionResult<RegisterResult> RegisterUser(RegisterDto register, int j, bool k)
+        public ActionResult<RegisterResult> RegisterUser([FromBody]RegisterDto register)
         {
             RegisterResult registerResult = new RegisterResult
             {
                 IsSuccess = true
             };
 
+            // TODO - make this utility function
             if (!ModelState.IsValid)
             {
                 var errMsg = string.Join(" | ",
@@ -30,6 +31,10 @@ namespace apis.Controllers
 
                 return BadRequest(registerResult);
             }
+
+            // Push the user to the database with encrypted password
+
+
 
             if (registerResult.IsSuccess)
             {
